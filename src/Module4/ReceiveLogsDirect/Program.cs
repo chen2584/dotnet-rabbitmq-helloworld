@@ -45,7 +45,7 @@ namespace ReceiveLogsDirect
                     Console.WriteLine(" [x] Received '{0}':'{1}'",
                                       routingKey, message);
                 };
-                channel.BasicConsume(queue: "Chen",
+                channel.BasicConsume(queue: queueName,
                                      autoAck: true,
                                      consumer: consumer);
 
